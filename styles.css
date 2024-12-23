@@ -1,0 +1,224 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    height: 100%;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0044cc; /* Dark blue */
+    padding: 10px 20px;
+    color: white;
+}
+.navbar .nav-links a:hover,
+.dropdown .dropbtn:hover {
+    padding: 10px;
+    background-color: #00317e;
+    border-radius: 5px;
+}
+
+.navbar .logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-links a, .dropbtn {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar .nav-links a:hover, .dropdown:hover .dropbtn {
+    color: #60a5fa; /* Lighter blue hover */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3b82f6; /* Medium blue */
+    min-width: 150px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #1e40af; /* Darker blue */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Main Content */
+.container {
+    display: flex;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Side Menu */
+.side-menu {
+    margin: 0 10px;
+    width: 25%;
+    background-color: #e0f2fe; /* Very light blue */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.side-menu .user-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.side-menu .resources .resource-link {
+    display: block;
+    margin: 15px 0;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    background-color: #1e3a8a; /* Dark blue */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.side-menu .resources .resource-link:hover {
+    background-color: #3b82f6; /* Lighter blue hover */
+}
+
+.about-text {
+    text-align: justify;
+    line-height: 1.5;
+    color: #334155; /* Dark gray-blue for text */
+}
+
+/* Center Content */
+.main-content {
+    width: 50%;
+    padding: 20px;
+}
+
+.branches-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: center;
+}
+
+.branch-link {
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    color: #1e3a8a; /* Dark blue */
+    background-color: #bfdbfe; /* Soft blue */
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+
+.branch-link:hover {
+    background-color: #1e40af; /* Darker blue */
+    color: white;
+}
+
+/* Announcement Box */
+.announcement-box {
+    background-color: #e0f2fe; /* Light blue */
+    border: 1px solid #bfdbfe; /* Medium blue border */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.announcement-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.announcement-text {
+    font-size: 16px;
+    color: #1e3a8a; /* Dark blue */
+    margin-bottom: 15px;
+}
+
+.announcement-link {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    background-color: #1e3a8a; /* Dark blue */
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.announcement-link:hover {
+    background-color: #3b82f6; /* Lighter blue hover */
+}
+
+/* Left Side Box */
+.left-box {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.left-box .resource-link {
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    background-color: #1e3a8a; /* Dark blue */
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.left-box .resource-link:hover {
+    background-color: #3b82f6; /* Lighter blue */
+}
+
+/* Center Image and Description */
+.center-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.center-image {
+    width: 50%;
+    max-width: 100px;
+}
+
+.center-description {
+    text-align: justify;
+    line-height: 1.2;
+    font-size: 16px;
+    color: #334155; /* Dark gray-blue */
+}

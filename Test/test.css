@@ -1,0 +1,139 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.quiz-container {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 20px;
+}
+
+.left-side-menu, .right-side-menu {
+    width: 20%;
+    background-color: #333;
+    padding: 20px;
+    color: white;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.middle-content {
+    width: 55%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#question-links a {
+    display: block;
+    margin: 5px 0;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+
+#question-links a.visited {
+    background-color: orange;
+}
+
+#question-links a.answered {
+    background-color: green;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.timer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#question-container {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#question-container label {
+    display: block;
+    margin: 10px 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+#question-container input[type="radio"] {
+    margin-right: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.timer p {
+    color: yellow;
+}
+
+#question-container img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+
+/* Side menu with grid layout for question numbers */
+#question-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 10px;
+}
+
+#question-links a {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#question-links a.visited {
+    background-color: orange;
+}
+
+#question-links a.answered {
+    background-color: green;
+}
+
+#question-links a:hover {
+    background-color: #555;
+}

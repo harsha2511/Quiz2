@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="test.css">
+    <link rel="icon" href="../Images/logo.png" type="image/x-icon"> 
+</head>
+<body>
+
+<div class="quiz-container">
+    <div class="left-side-menu" id="left-side-menu">
+        <div class="question-links" id="question-links"></div>
+    </div>
+
+    <div class="middle-content">
+        <div id="question-container"></div>
+        <div class="buttons">
+            <button id="clear-btn">Clear</button>
+            <button id="next-btn">Save & Next</button>
+        </div>
+    </div>
+
+    <div class="right-side-menu" id="right-side-menu">
+        <div class="profile">
+            <p id="user-name">User Name</p>
+            <img src="../Images/user.jpg" alt="Profile Photo" id="profile-photo">
+        </div>
+        <br>
+        <div class="timer">
+            <p>Time Left:</p>
+            <span id="timer">180:00</span>
+        </div>
+        <br>
+        <button id="submit-btn">Submit Quiz</button>
+    </div>
+</div>
+
+<script src="test.js"></script>
+</body>
+</html>
