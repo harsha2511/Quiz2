@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Images/logo.png" type="image/x-icon"> 
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #0044cc;
+            color: white;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+        }
+
+        .navbar .nav-links a,
+        .dropdown .dropbtn {
+            text-decoration: none;
+            color: white;
+            margin: 0 10px;
+            font-size: 16px;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar .nav-links a:hover,
+        .dropdown .dropbtn:hover {
+            background-color: #00317e;
+            border-radius: 5px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #004aad;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            padding: 5px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 8px 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .logo img {
+            height: 50px;
+            width: 50px;
+            /* border-radius: 50%; */
+        }
+
+        .nav-links a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffcc00;
+        }
+
+        /* Body Content */
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .box {
+            display: flex;
+            align-items: center;
+            background-color: #e0e7ff;
+            width: 80%;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        .box img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            margin-right: 20px;
+            animation: scaleUp 1.5s ease-in-out;
+        }
+
+        .box .name {
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .text {
+            animation: textSlide 1.5s ease-in-out;
+        }
+
+        .text h2 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .text p {
+            margin: 5px 0 0 0;
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            margin-right: 10px;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+        }
+
+        .social-icons img {
+            width: 100%;
+            height: auto;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            /* Center the icons */
+            gap: 20px;
+            /* Spacing between icons */
+            flex-wrap: wrap;
+            /* Allow wrapping on smaller screens */
+        }
+
+        .social-icons a {
+            width: 35px;
+            /* Ensure consistent size for icons */
+            height: 40px;
+        }
+
+        .social-icons img {
+            width: 100%;
+            /* Make icons responsive */
+            height: auto;
+        }
+
+        .full-bio-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #0044cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.3s, transform 0.3s ease;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .full-bio-link:hover {
+            background-color: #00317e;
+            color: #ffcc00;
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .social-icons {
+                gap: 15px;
+                /* Reduce gap on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .social-icons a {
+                width: 30px;
+                /* Shrink icon size on very small screens */
+                height: 30px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes scaleUp {
+            from {
+                transform: scale(0.8);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes textSlide {
+            from {
+                transform: translateY(50%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="/Images/logo.png" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Branch</button>
+                <div class="dropdown-content">
+                    <a href="branch/eee.html">AIML</a>
+                    <a href="branch/aids.html">AIDS</a>
+                    <a href="branch/bt.html">BT</a>
+                    <a href="branch/chem.html">CHEMICAL</a>
+                    <a href="branch/civil.html">CIVIL</a>
+                    <a href="branch/cse.html">CSE</a>
+                    <a href="branch/cyber.html">CYBER</a>
+                    <a href="branch/ece.html">ECE</a>
+                    <a href="branch/eee.html">EEE</a>
+                    <a href="branch/eie.html">EIE</a>
+                    <a href="branch/ete.html">ETE</a>
+                    <a href="branch/iem.html">IEM</a>
+                    <a href="branch/mech.html">MECH</a>
+                    <a href="branch/md.html">MD</a>
+                </div>
+            </div>
+            <a href="faqs.html">FAQs</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <div class="box">
+            <div>
+                <img src="Images/hod.jpg" alt="Dr. Pradipkumar Dixit">
+                <p class="name">Vice Principle</p>
+            </div>
+            <div class="text">
+                <h2><b>Dr. Pradipkumar Dixit</b></h2>
+                <p><strong>Department:</strong> Electrical & Electronics Engineering</p>
+                <p><strong>Email:</strong> dix.hve@gmail.com</p>
+                <p><strong>Contact No:</strong>+91 7259920479</p>
+                <p><a href="https://www.msrit.edu/department/faculty-detail.html?dept=eee&ID=1"
+                        class="full-bio-link" target="_blank">Full Bio</a></p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/ghemachandra/" target="_blank">
+                        <img src="Images/linkedin.png" alt="LinkedIn">
+                    </a>
+                    <a href="tel:+917259920479" target="_blank">
+                        <img src="Images/phone.png" alt="Phone Number">
+                    </a>
+                    <a href="mailto:dix.hve@gmail.com" target="_blank">
+                        <img src="Images/gmail.png" alt="Gmail">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <!-- <img src="Images/hema.jpg" alt="Person 2"> -->
+            <div>
+                <img src="Images/hema.jpg" alt="Dr. Hemachandra Gudimindla">
+                <p class="name">Faculty</p>
+            </div>
+            <div class="text">
+                <h2><b>Dr. Hemachandra Gudimindla</b></h2>
+                <p><strong>Department:</strong> Electrical & Electronics Engineering</p>
+                <p><strong>Email:</strong> john.doe@example.com</p>
+                <p><strong>Contact No:</strong>+91 8618899095</p>
+                <p><a href="https://www.msrit.edu/department/faculty-detail.html?dept=eee&ID=12"
+                        class="full-bio-link" target="_blank">Full Bio</a></p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/ghemachandra/" target="_blank">
+                        <img src="Images/linkedin.png" alt="LinkedIn">
+                    </a>
+                    <a href="tel:+918618899095" target="_blank">
+                        <img src="Images/phone.png" alt="Phone Number">
+                    </a>
+                    <a href="https://instagram.com/johndoe" target="_blank">
+                        <img src="Images/gmail.png" alt="Gmail">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="box">
+            <div>
+                <img src="Images/harsha.jpeg" alt="Person 3">
+                <p class="name"></p>
+            </div>
+            <div class="text">
+                <h2><b>Harsha Kumari</b></h2>
+                <p><strong>Department:</strong> Electrical & Electronics Engineering</p>
+                <p><strong>Email:</strong> 1MS22EE018@msrit.edu</p>
+                <p><strong>Contact No:</strong> +1122334455</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/harsha-kumari-246084294/" target="_blank">
+                        <img src="Images/linkedin.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://github.com/harsha2511" target="_blank">
+                        <img src="Images/github.png" alt="GitHub">
+                    </a>
+                    <a href="mailto:harshakumari1125@gmail.com" target="_blank">
+                        <img src="Images/gmail.png" alt="Gmail">
+                    </a>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</body>
+
+</html>

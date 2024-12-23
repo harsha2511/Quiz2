@@ -1,0 +1,106 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eaf3fc; /* Light blue background */
+    height: 100%;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366; /* Dark blue navbar */
+    padding: 10px 20px;
+    color: white;
+}
+
+.navbar .logo img {
+    width: 50px; /* Adjust logo size */
+    height: 50px;
+    object-fit: contain;
+}
+
+.navbar .nav-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #66b2ff; /* Light blue hover effect for links */
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    padding: 20px;
+    margin-top: 20px;
+    height: calc(100vh - 60px); /* Adjust height to fill the page, accounting for navbar height */
+}
+
+/* Side Menu */
+.side-menu {
+    width: 25%;
+    background-color: #004080; /* Deep blue background for the side menu */
+    padding: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.side-menu .user-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 2px solid #66b2ff; /* Light blue border for profile photo */
+}
+
+.side-menu .user-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff; /* White text for user name */
+}
+
+.side-menu .about-text {
+    font-size: 14px;
+    color: #cce7ff; /* Light blue for descriptive text */
+    text-align: justify;
+    line-height: 1.5;
+}
+
+/* Center Content */
+.main-content {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 20px;
+}
+
+.main-content .mock-link {
+    display: block;
+    width: 80%; /* Adjust width to make the boxes longer */
+    margin: 15px 0;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px; /* Slightly larger font */
+    color: #003366; /* Dark blue text for links */
+    background-color: #cce7ff; /* Light blue background for links */
+    padding: 15px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow for better aesthetics */
+}
+
+.main-content .mock-link:hover {
+    background-color: #003366; /* Dark blue background on hover */
+    color: #ffffff; /* White text on hover */
+}

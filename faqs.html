@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Images/logo.png" type="image/x-icon"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+    }
+    
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #004aad;
+        padding: 10px 20px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    .navbar .logo img {
+        width: 50px;
+        height: 50px;
+        /* border-radius: 50%; */
+    }
+    
+    .navbar .nav-links a, .dropdown .dropbtn {
+        text-decoration: none;
+        color: white;
+        margin: 0 10px;
+        font-size: 16px;
+        padding: 5px 10px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .navbar .nav-links a:hover, .dropdown .dropbtn:hover {
+        background-color: #00317e;
+        border-radius: 5px;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #004aad;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        padding: 5px;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    .dropdown-content a {
+        color: #333;
+        padding: 8px 10px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+    
+    .faq-container {
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 20px;
+    }
+    
+    .faq-container h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #004aad;
+    }
+    
+    .faq {
+        margin-bottom: 20px;
+        padding: 15px;
+        background: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    
+    .faq.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .faq h2 {
+        color: #004aad;
+        margin: 0 0 10px;
+    }
+    
+    .faq p {
+        margin: 0;
+        line-height: 1.6;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="/Images/logo.png" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Branch</button>
+                <div class="dropdown-content">
+                    <a href="branch/eee.html">AIML</a>
+                    <a href="branch/aids.html">AIDS</a>
+                    <a href="branch/bt.html">BT</a>
+                    <a href="branch/chem.html">CHEMICAL</a>
+                    <a href="branch/civil.html">CIVIL</a>
+                    <a href="branch/cse.html">CSE</a>
+                    <a href="branch/cyber.html">CYBER</a>
+                    <a href="branch/ece.html">ECE</a>
+                    <a href="branch/eee.html">EEE</a>
+                    <a href="branch/eie.html">EIE</a>
+                    <a href="branch/ete.html">ETE</a>
+                    <a href="branch/iem.html">IEM</a>
+                    <a href="branch/mech.html">MECH</a>
+                    <a href="branch/md.html">MD</a>
+                </div>
+            </div>
+            <a href="faqs.html">FAQs</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq-container">
+        <h1>Frequently Asked Questions (FAQs)</h1>
+
+        <!-- FAQ List -->
+        <div class="faq" id="faq-1">
+            <h2>1. I am currently studying in 3rd year B.A./B.Com./B.Sc. Am I eligible to appear for GATE 2025?</h2>
+            <p>YES, any undergraduate student currently in 3rd year or higher years of any government approved program in Engineering/ Technology/ Architecture/ Science/ Commerce/Arts/ Humanities is eligible to appear for GATE 2025.</p>
+        </div>
+        <div class="faq" id="faq-2">
+            <h2>2. I am currently studying in 3rd year B.E., but through parallel entry in the 2nd year after finishing Diploma, am I eligible to appear for GATE 2025?</h2>
+            <p>YES, any undergraduate student currently in 3rd year or higher years of any government approved program in Engineering/ Technology/ Architecture/ Science/ Commerce/Arts/ Humanities is eligible to appear for GATE 2025.</p>
+        </div>
+        <div class="faq" id="faq-3">
+            <h2>3. Is there any age limit to appear for GATE 2025?</h2>
+            <p>NO. There is NO age limit to appear for GATE 2025.</p>
+        </div>
+        <div class="faq" id="faq-4">
+            <h2>4. Are there any restrictions on the number of times one can appear for GATE?</h2>
+            <p>NO. One can appear for the GATE examination any number of times.</p>
+        </div>
+        <div class="faq" id="faq-5">
+            <h2>5. Can I appear in any of the GATE 2025 papers?</h2>
+            <p>Although, the candidate is free to choose any of the papers (up to two from the given combinations), candidate should select paper appropriate to the discipline of qualifying degree.</p>
+        </div>
+        <div class="faq" id="faq-6">
+            <h2>6. How do I apply ONLINE?</h2>
+            <p>Visit <a href="https://gate2025.iitr.ac.in/" target="_blank">https://gate2025.iitr.ac.in/</a></p>
+        </div>
+        <div class="faq" id="faq-7">
+            <h2>7. Can I use one e-mail address to fill multiple application forms?</h2>
+            <p>NO. One e-mail address can be used to submit only ONE application form.</p>
+        </div>
+        <div class="faq" id="faq-8">
+            <h2>8. Do I need to fill two forms to appear in two papers?</h2>
+            <p>NO. The two papers option may be selected based on the given set of combinations in a SINGLE form only.</p>
+        </div>
+        <div class="faq" id="faq-9">
+            <h2>9. Why should I choose THREE examination cities?</h2>
+            <p>The candidates will most likely be allotted a centre in the examination city of their first choice. Only in cases, where there are too many candidates opting for a certain city as their first choice, the other two choices become relevant.</p>
+        </div>
+        <div class="faq" id="faq-10">
+            <h2>10. What do I do, if the power/internet connection failed during the submission of application process?</h2>
+            <p>Please login to your account at GATE 2025 website again and continue the application process.</p>
+        </div>
+    </div>
+
+    <script>
+        const faqs = document.querySelectorAll('.faq');
+
+        window.addEventListener('scroll', () => {
+            faqs.forEach(faq => {
+                const rect = faq.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    faq.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

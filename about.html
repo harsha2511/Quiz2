@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Images/logo.png" type="image/x-icon"> 
+    <style>
+        /* General Reset */
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+            background-color: #bed6fc;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #004aad;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar .logo img {
+            width: 50px;
+            height: 50px;
+            /* border-radius: 50%; */
+        }
+
+        .navbar .nav-links a,
+        .dropdown .dropbtn {
+            text-decoration: none;
+            color: white;
+            margin: 0 10px;
+            font-size: 16px;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar .nav-links a:hover,
+        .dropdown .dropbtn:hover {
+            background-color: #00317e;
+            border-radius: 5px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #004aad;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            padding: 5px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 8px 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* About Section */
+        .about-container {
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+
+        .summary {
+            text-align: center;
+            background-color: #e3f2fd;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .summary h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .summary p {
+            text-align: justify;
+        }
+
+        .profiles {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .profile {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+            width: 250px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 15px;
+        }
+
+        .profile h3 {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .profile h4 {
+            font-size: 14px;
+            font-weight: normal;
+            color: gray;
+            margin: 5px 0;
+        }
+
+        .profile p {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="/Images/logo.png" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Branch</button>
+                <div class="dropdown-content">
+                    <a href="branch/eee.html">AIML</a>
+                    <a href="branch/aids.html">AIDS</a>
+                    <a href="branch/bt.html">BT</a>
+                    <a href="branch/chem.html">CHEMICAL</a>
+                    <a href="branch/civil.html">CIVIL</a>
+                    <a href="branch/cse.html">CSE</a>
+                    <a href="branch/cyber.html">CYBER</a>
+                    <a href="branch/ece.html">ECE</a>
+                    <a href="branch/eee.html">EEE</a>
+                    <a href="branch/eie.html">EIE</a>
+                    <a href="branch/ete.html">ETE</a>
+                    <a href="branch/iem.html">IEM</a>
+                    <a href="branch/mech.html">MECH</a>
+                    <a href="branch/md.html">MD</a>
+                </div>
+            </div>
+            <a href="faqs.html">FAQs</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-container">
+        <div class="summary">
+            <h2>About This Website</h2>
+            <p>
+                The GATE Mock Test website is a specialized platform for MSRIT students preparing for the GATE exam. It
+                offers realistic mock tests, detailed solutions, and performance analytics to help students identify
+                their strengths and areas for improvement. Designed for flexibility, the platform is accessible on
+                multiple devices, ensuring students can study anytime. Additional resources like study materials, past
+                papers, and expert tips enhance preparation. With features like leaderboards and interactive forums, the
+                website fosters a competitive and collaborative learning environment, equipping students with the skills
+                and confidence needed to excel in GATE and achieve their goals.</p>
+        </div>
+
+        <!-- Profiles Section -->
+        <div class="profiles">
+            <div class="profile">
+                <img src="Images/user.jpg" alt="Profile Photo">
+                <h3>John Doe</h3>
+                <h4>Department: Electrical & Electronics Engineering</h4>
+                <p>
+                    John is a seasoned developer with a passion for AI and machine learning.
+                    He has contributed significantly to the project's backend development and
+                    data analysis strategies.
+                </p>
+            </div>
+            <div class="profile">
+                <img src="Images/user.jpg" alt="Profile Photo">
+                <h3>Jane Smith</h3>
+                <h4>Department: Electrical & Electronics Engineering</h4>
+                <p>
+                    Jane specializes in UI/UX design, ensuring the website's interface remains
+                    user-friendly and visually appealing. She also leads the creative direction
+                    for all features and animations.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const faqs = document.querySelectorAll('.faq');
+
+    window.addEventListener('scroll', () => {
+        faqs.forEach(faq => {
+            const rect = faq.getBoundingClientRect();
+            if (rect.top < window.innerHeight) {
+                faq.classList.add('visible');
+            }
+        });
+    });
+</script>
+
+</html>
